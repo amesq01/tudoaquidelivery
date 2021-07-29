@@ -25,7 +25,7 @@ import {Header} from '../../components/Header';
 import {colors, parameters, title} from '../../global/styles';
 import * as Animatable from 'react-native-animatable';
 
-export function SignInScreen() {
+export function SignInScreen({navigation}) {
   const [visibility, setVisibility] = useState(false);
 
   function isVisible() {
@@ -38,7 +38,11 @@ export function SignInScreen() {
         behavior={Platform.OS === 'ios' ? 'position' : 'height'}
         style={{flex: 1}}>
         <View style={styles.container}>
-          <Header title="Minha Conta" iconName="arrow-left" />
+          <Header
+            title="Minha Conta"
+            iconName="arrow-left"
+            navigation={navigation}
+          />
 
           <View style={{marginLeft: 20, marginTop: 20}}>
             <Text style={title}>Login</Text>
