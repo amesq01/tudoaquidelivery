@@ -10,12 +10,13 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 
 import {SignInWelcomeScreen} from '../screens/authScreens/SignInWelcomeScreen';
 import {SignInScreen} from '../screens/authScreens/SignInScreen';
+import {HomeScreen} from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
 export function AuthNavigators() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="HomeScreen">
       <Stack.Screen
         name="SignInWelcomeScreen"
         component={SignInWelcomeScreen}
@@ -27,6 +28,14 @@ export function AuthNavigators() {
       <Stack.Screen
         name="SignInScreen"
         component={SignInScreen}
+        options={{
+          headerShown: false,
+          ...TransitionPresets.RevealFromBottomAndroid,
+        }}
+      />
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
         options={{
           headerShown: false,
           ...TransitionPresets.RevealFromBottomAndroid,
