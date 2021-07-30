@@ -43,7 +43,7 @@ export function HomeHeader({title, iconName, navigation}) {
           name="cart"
           color={colors.cardbackground}
           size={35}
-          onPress={() => navigation.goBack()}
+          //onPress={() => navigation.goBack()}
         />
       </View>
     </View>
