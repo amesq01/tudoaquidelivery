@@ -15,7 +15,7 @@ export function HomeHeader({title, iconName, navigation}) {
   const BadgeIcon = withBadge(0)(Icon);
 
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, {}]}>
       <View
         style={{
           alignItems: 'center',
